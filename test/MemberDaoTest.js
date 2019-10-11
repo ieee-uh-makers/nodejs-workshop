@@ -75,7 +75,7 @@ describe("MemberDaoTest", function() {
 
     describe("#update", function() {
         it("should update a member", function() {
-            return memberDao.update(1, "Clark Kent")
+            return memberDao.update(1, "Clark Kent", "clark@uh.edu")
                 .then(function() {
                     return new Promise(function(resolve, reject) {
                         memberDao.db.get("SELECT * FROM members WHERE id = 1", [], function(err, row) {
